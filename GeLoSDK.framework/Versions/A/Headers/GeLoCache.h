@@ -9,15 +9,17 @@
 
 #import <UIKit/UIKit.h>
 
-FOUNDATION_EXPORT NSString *const kGeLoCacheSitesLoaded;
-FOUNDATION_EXPORT NSString *const kGeLoCacheSiteLoaded;
-FOUNDATION_EXPORT NSString *const kGeLoCacheSiteUpdated;
 
-@class GeLoSite;
+@class GeLoTour;
 
 @interface GeLoCache : NSObject {
 	NSMutableDictionary		*imageCache;
-	NSMutableDictionary		*siteCache;
+    NSMutableDictionary		*audioCache;
+	NSMutableDictionary		*tourCache;
+    NSMutableDictionary     *siteCache;
+    NSMutableDictionary     *beaconListCache;
+    dispatch_queue_t        serialQueue;
+
 }
 
 @property (nonatomic) NSNotificationCenter *notificationCenter;
@@ -27,8 +29,11 @@ FOUNDATION_EXPORT NSString *const kGeLoCacheSiteUpdated;
 
 - (void)clearCache;
 
+- (NSArray *)loadTours;
+- (GeLoTour *)loadTour:(NSNumber *)tourId;
 - (NSArray *)loadSites;
 - (GeLoSite *)loadSite:(NSNumber *)siteId;
 - (UIImage *)loadImage:(NSString *)imageUrl;
-
+- (NSData *)loadAudio:(NSString *)audioUrl;
+- (NSDictionary *)loadBeaconList;
 @end

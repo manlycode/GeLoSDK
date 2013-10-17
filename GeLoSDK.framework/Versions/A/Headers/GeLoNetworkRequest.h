@@ -10,10 +10,6 @@
 
 @interface GeLoNetworkRequest : NSObject<NSURLConnectionDataDelegate>
 
-FOUNDATION_EXPORT NSString *const kGeLoNetworkRequestStarted;
-FOUNDATION_EXPORT NSString *const kGeLoNetworkRequestFinished;
-FOUNDATION_EXPORT NSString *const kGeLoNetworkRequestErrored;
-
 + (id)requestWithDelegate:(NSObject *)delegate selector:(SEL)selector path:(NSString *)path, ...;
 - (id)initWithDelegate:(NSObject *)delegate selector:(SEL)selector path:(NSString *)path, ...;
 

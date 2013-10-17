@@ -2,7 +2,7 @@
 //  GeLoSite.h
 //  GeLoSDK
 //
-//  Created by Tim Bugai on 5/22/13.
+//  Created by Thomas Peterson on 8/30/13.
 //  Copyright (c) 2013 Collective Idea. All rights reserved.
 //
 
@@ -10,11 +10,12 @@
 
 @interface GeLoSite : NSObject
 
-@property (nonatomic) NSNumber			*id;
-@property (nonatomic) NSString			*name;
-@property (nonatomic) NSString			*map;
-@property (nonatomic) NSDate				*updatedAt;
-@property (nonatomic, readonly) NSDictionary	*beaconInfo;
+@property (nonatomic) NSNumber *siteId;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *logo;
+@property (nonatomic) NSString *background;
+@property (nonatomic) NSDate   *updatedAt;
+@property (nonatomic) NSString *description;
 
 + (id)siteFromJson:(NSDictionary *)dictionary;
 - (id)initWithJson:(NSDictionary *)dictionary;

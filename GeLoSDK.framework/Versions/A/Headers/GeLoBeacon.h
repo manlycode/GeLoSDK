@@ -11,14 +11,14 @@
 
 @interface GeLoBeacon : NSObject {
 	NSUInteger			beaconId;
-	NSMutableArray  *signalStrengths;
+    NSInteger           signalStrength;
+    NSInteger           receivedRSSI;
 	NSUInteger			timeToLive;
 }
 
 + (id)beaconWithData:(NSData *)_data signalStrength:(NSInteger)_signal timeToLive:(NSUInteger)_ttl;
 
 - (id)initWithId:(NSUInteger)_id signalStrength:(NSInteger)_signal timeToLive:(NSUInteger)_ttl;
-- (id)initWithId:(NSUInteger)_id signalStrengths:(NSArray *)_signals timeToLive:(NSUInteger)_ttl;
 - (id)initWithData:(NSData *)_data signalStrength:(NSInteger)_signal timeToLive:(NSUInteger)_ttl;
 
 - (void)addSignalStrength:(NSNumber *)signalStrength;
@@ -26,8 +26,8 @@
 
 - (NSUInteger)beaconId;
 - (NSInteger)signalStrength;
+- (NSInteger)receivedRSSI;
 - (NSUInteger)timeToLive;
-- (NSUInteger)signalCount;
 
 - (GeLoBeaconInfo *)info;
 
