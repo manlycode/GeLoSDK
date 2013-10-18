@@ -31,6 +31,7 @@ While `GeLoBeaconManager` is scanning, it can emit the following notifications:
  - kGeLoBeaconImageLoaded
  - kGeLoBeaconMediaLoaded
 */
+
 @interface GeLoCache : NSObject {
 	NSMutableDictionary		*imageCache;
     NSMutableDictionary		*audioCache;
@@ -40,9 +41,11 @@ While `GeLoBeaconManager` is scanning, it can emit the following notifications:
     dispatch_queue_t        serialQueue;
 }
 
-@property (nonatomic) NSNotificationCenter *notificationCenter;
-
 + (id)sharedCache;
+
+/**
+ Directory on the device where cache data is stored
+ */
 + (NSString *)cacheDirectory;
 
 - (void)clearCache;
@@ -57,5 +60,7 @@ While `GeLoBeaconManager` is scanning, it can emit the following notifications:
 - (UIImage *)loadImage:(NSString *)imageUrl;
 - (NSData *)loadAudio:(NSString *)audioUrl;
 - (NSDictionary *)loadBeaconList;
+
+@property (nonatomic) NSNotificationCenter *notificationCenter;
 
 @end
