@@ -12,6 +12,35 @@
 		</Token>
 		
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/GeLoCache/loadTours</TokenIdentifier>
+			<Abstract type="html">Fetches and caches a list of available tours.</Abstract>
+			<DeclaredIn>GeLoCache.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)loadTours</Declaration>
+			
+			<ReturnValue><Abstract type="html">array of tours</Abstract></ReturnValue>
+			<Anchor>//api/name/loadTours</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/GeLoCache/siteForBeaconId:</TokenIdentifier>
+			<Abstract type="html">Finds the site a beacon belongs to.</Abstract>
+			<DeclaredIn>GeLoCache.m</DeclaredIn>
+			
+			<Declaration>- (NSInteger)siteForBeaconId:(NSInteger)beaconId</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>beaconId</Name>
+					<Abstract type="html">A beacon id</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">GeloSite which the id belongs to</Abstract></ReturnValue>
+			<Anchor>//api/name/siteForBeaconId:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
         
 	</File>
 </Tokens>
