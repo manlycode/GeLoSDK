@@ -13,6 +13,7 @@
 					<Subnodes>
 						<NodeRef refid="1"/>
 						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
 						
 					</Subnodes>
 				</Node>
@@ -55,6 +56,11 @@
                 </Node>
                 
             </Subnodes>
+            
+        </Node>
+		<Node id="3" type="file" documentType="reference">
+            <Name>GeLoCache</Name>
+            <Path>Classes/GeLoCache.html</Path>
             
         </Node>
 		
