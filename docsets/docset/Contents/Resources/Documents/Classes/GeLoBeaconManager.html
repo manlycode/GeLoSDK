@@ -193,7 +193,24 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p><code>GeLoBeaconManager</code> scans for beacons and also maintains a list of beacons it can find.</p>
+						<p><code>GeLoBeaconManager</code> scans for beacons and also maintains a list of beacons it can find.
+<code>
+    [GeLoBeaconManager sharedInstance] startScanning];
+    [GeLoBeaconManager sharedInstance] pauseScanning];
+    [GeLoBeaconManager sharedInstance] resumeScanning];
+</code></p>
+
+<p>While <code>GeLoBeaconManager</code> is scanning, it can emit the following events:
+- kGeLoBeaconAgedGracefully
+- kGeLoBeaconExpired
+- kGeLoNearestBeaconExpired
+- kGeLoNearestBeaconChanged
+- kGeLoBeaconFound
+- kGeLoTourLoaded
+- kGeLoSiteLoaded
+- kGeLoToursLoaded
+- kGeLoSitesLoaded
+- kGeLoBeaconListLoaded</p>
 					</div>
 					
 					
@@ -386,7 +403,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>an instance of <a href="../Classes/GeLoSite.html">GeLoSite</a></p>
+		<p>an instance of GeLoSite</p>
 	</div>
 	
 	
@@ -529,7 +546,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>an instance of <a href="../Classes/GeLoBeaconInfo.html">GeLoBeaconInfo</a></p>
+		<p>an instance of GeLoBeaconInfo</p>
 	</div>
 	
 	
@@ -667,7 +684,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>an array of <a href="../Classes/GeLoBeacon.html">GeLoBeacon</a> instances</p>
+		<p>an array of GeLoBeacon instances</p>
 	</div>
 	
 	
@@ -812,7 +829,7 @@ with the updated list after the remote host has responded.</p>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>an instance of <a href="../Classes/GeLoBeacon.html">GeLoBeacon</a></p>
+		<p>an instance of GeLoBeacon</p>
 	</div>
 	
 	
