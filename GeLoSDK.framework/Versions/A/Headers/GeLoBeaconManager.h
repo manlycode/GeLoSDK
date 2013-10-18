@@ -9,7 +9,24 @@
 
 
 /**
- `GeLoBeaconManager` scans for beacons and also maintains a list of beacons it can find.
+`GeLoBeaconManager` scans for beacons and also maintains a list of beacons it can find.
+ <code>
+    [GeLoBeaconManager sharedInstance] startScanning];
+    [GeLoBeaconManager sharedInstance] pauseScanning];
+    [GeLoBeaconManager sharedInstance] resumeScanning];
+ </code>
+ 
+While `GeLoBeaconManager` is scanning, it can emit the following events:
+- kGeLoBeaconAgedGracefully
+- kGeLoBeaconExpired
+- kGeLoNearestBeaconExpired
+- kGeLoNearestBeaconChanged
+- kGeLoBeaconFound
+- kGeLoTourLoaded
+- kGeLoSiteLoaded
+- kGeLoToursLoaded
+- kGeLoSitesLoaded
+- kGeLoBeaconListLoaded
 */
 @interface GeLoBeaconManager : NSObject<CBCentralManagerDelegate> {
     __block NSMutableDictionary	  *knownBeacons;
