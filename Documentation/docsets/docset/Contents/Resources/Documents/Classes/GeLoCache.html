@@ -99,20 +99,20 @@
 
 <p>Example:</p>
 
-<p>-(void)viewDidLoad {
-     [[NSNotificationCenter defaultCenter] addObserver:self
-                                              selector:@selector(toursLoaded:)
-                                                  name:kGeLoCacheToursLoaded
-                                                object:nil];</p>
+<pre><code>-(void)viewDidLoad {
 
-<pre><code>tours = [[GeLoCache sharedCache] loadTours]; //since the tours have not loaded yet, the return will be nil
-</code></pre>
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(toursLoaded:)
+                                                 name:kGeLoCacheToursLoaded
+                                               object:nil];
 
-<p>}</p>
+    tours = [[GeLoCache sharedCache] loadTours]; //since the tours have not loaded yet, the return will be nil
+}
 
-<p>-(void) toursLoaded {
+-(void) toursLoaded {
     tours = [[GeLoCache sharedCache] loadTours];
-}</p>
+}
+</code></pre>
 
 <p>While <code>GeLoBeaconManager</code> is scanning, it can emit the following notifications:</p>
 

@@ -6,18 +6,19 @@
  
 Example:
  
- -(void)viewDidLoad {
-     [[NSNotificationCenter defaultCenter] addObserver:self 
-                                              selector:@selector(toursLoaded:)
-                                                  name:kGeLoCacheToursLoaded
-                                                object:nil];
+    -(void)viewDidLoad {
  
-    tours = [[GeLoCache sharedCache] loadTours]; //since the tours have not loaded yet, the return will be nil
- }
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(toursLoaded:)
+                                                     name:kGeLoCacheToursLoaded
+                                                   object:nil];
  
- -(void) toursLoaded {
-    tours = [[GeLoCache sharedCache] loadTours];
- }
+        tours = [[GeLoCache sharedCache] loadTours]; //since the tours have not loaded yet, the return will be nil
+    }
+ 
+    -(void) toursLoaded {
+        tours = [[GeLoCache sharedCache] loadTours];
+    }
  
 While `GeLoBeaconManager` is scanning, it can emit the following notifications:
  
