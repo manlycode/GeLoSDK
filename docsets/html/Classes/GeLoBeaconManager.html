@@ -193,24 +193,30 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p><code>GeLoBeaconManager</code> scans for beacons and also maintains a list of beacons it can find.
-<code>
-    [GeLoBeaconManager sharedInstance] startScanning];
-    [GeLoBeaconManager sharedInstance] pauseScanning];
-    [GeLoBeaconManager sharedInstance] resumeScanning];
-</code></p>
+						<p><code>GeLoBeaconManager</code> scans for beacons and also maintains a list of beacons it can find.</p>
 
-<p>While <code>GeLoBeaconManager</code> is scanning, it can emit the following events:
-- kGeLoBeaconAgedGracefully
-- kGeLoBeaconExpired
-- kGeLoNearestBeaconExpired
-- kGeLoNearestBeaconChanged
-- kGeLoBeaconFound
-- kGeLoTourLoaded
-- kGeLoSiteLoaded
-- kGeLoToursLoaded
-- kGeLoSitesLoaded
-- kGeLoBeaconListLoaded</p>
+<p>Example:</p>
+
+<pre><code>[GeLoBeaconManager sharedInstance] startScanning];
+[GeLoBeaconManager sharedInstance] pauseScanning];
+[GeLoBeaconManager sharedInstance] resumeScanning];
+</code></pre>
+
+<p>While <code>GeLoBeaconManager</code> is scanning, it can emit the following notifications:</p>
+
+<ul>
+<li>kGeLoBeaconAgedGracefully</li>
+<li>kGeLoBeaconExpired</li>
+<li>kGeLoNearestBeaconExpired</li>
+<li>kGeLoNearestBeaconChanged</li>
+<li>kGeLoBeaconFound</li>
+<li>kGeLoTourLoaded</li>
+<li>kGeLoSiteLoaded</li>
+<li>kGeLoToursLoaded</li>
+<li>kGeLoSitesLoaded</li>
+<li>kGeLoBeaconListLoaded</li>
+</ul>
+
 					</div>
 					
 					

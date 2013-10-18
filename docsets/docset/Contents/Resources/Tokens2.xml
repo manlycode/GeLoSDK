@@ -4,12 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/GeLoBeaconManager</TokenIdentifier>
-			<Abstract type="html">GeLoBeaconManager scans for beacons and also maintains a list of beacons it can find.
-&lt;code&gt;
-    [GeLoBeaconManager sharedInstance] startScanning];
-    [GeLoBeaconManager sharedInstance] pauseScanning];
-    [GeLoBeaconManager sharedInstance] resumeScanning];
-&lt;/code&gt;</Abstract>
+			<Abstract type="html">GeLoBeaconManager scans for beacons and also maintains a list of beacons it can find.</Abstract>
 			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
             
 			
