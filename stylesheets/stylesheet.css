@@ -299,6 +299,10 @@ Full-Width Styles
   font-size: 42px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
+  background: url(../images/tag.png) no-repeat;
+  padding-left: 140px;
+  padding-top: 30px;
+  height: 120px;
 }
 
 #project_tagline {
