@@ -13,6 +13,18 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GeLoCache/cacheDirectory</TokenIdentifier>
+			<Abstract type="html">Directory on the device where cache data is stored</Abstract>
+			<DeclaredIn>GeLoCache.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)cacheDirectory</Declaration>
+			
+			
+			<Anchor>//api/name/cacheDirectory</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/GeLoCache/loadTours</TokenIdentifier>
 			<Abstract type="html">Fetches and caches a list of available tours.</Abstract>
 			<DeclaredIn>GeLoCache.h</DeclaredIn>
