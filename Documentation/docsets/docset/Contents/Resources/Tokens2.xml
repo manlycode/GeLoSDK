@@ -4,13 +4,97 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/GeLoBeaconManager</TokenIdentifier>
-			<Abstract type="html">This class demonstrates AppleDoc.</Abstract>
+			<Abstract type="html">GeLoBeaconManager scans for beacons and also maintains a list of beacons it can find.
+*</Abstract>
 			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
             
 			
 			<NodeRef refid="2"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/setFalloff:forId:</TokenIdentifier>
+			<Abstract type="html">Sets the threshold for the specified beacon</Abstract>
+			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
+			
+			<Declaration>- (void)setFalloff:(NSInteger)_falloff forId:(NSUInteger)_id</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>_falloff</Name>
+					<Abstract type="html">the threshold for determining if a beacon is near</Abstract>
+				</Parameter><Parameter>
+					<Name>_id</Name>
+					<Abstract type="html">the id of the beacon to apply the threshold to</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setFalloff:forId:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/setDefaultFalloff:</TokenIdentifier>
+			<Abstract type="html">Sets the default threshold to apply to beacons without a threshold of their own</Abstract>
+			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
+			
+			<Declaration>- (void)setDefaultFalloff:(NSInteger)_falloff</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>_falloff</Name>
+					<Abstract type="html">the threshold for determining if a beacon is near</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDefaultFalloff:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/setDefaultTimeToLive:</TokenIdentifier>
+			<Abstract type="html">Sets the time a beacon will be allowed to remain in the known beacons list</Abstract>
+			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
+			
+			<Declaration>- (void)setDefaultTimeToLive:(NSUInteger)ttl</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>ttl</Name>
+					<Abstract type="html">the number of seconds a beacon will remain &quot;known&quot;</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDefaultTimeToLive:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/setDefaultSignalCeiling:</TokenIdentifier>
+			<Abstract type="html">Sets the default minimum signal strength that the SDK will pay attention too</Abstract>
+			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
+			
+			<Declaration>- (void)setDefaultSignalCeiling:(NSInteger)ceiling</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>ceiling</Name>
+					<Abstract type="html">minimum signal strength</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDefaultSignalCeiling:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/includeBetaTours</TokenIdentifier>
+			<Abstract type="html">Tell the beacon manager to request beta sites in addition to normal ones</Abstract>
+			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
+			
+			<Declaration>- (void)includeBetaTours</Declaration>
+			
+			
+			<Anchor>//api/name/includeBetaTours</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/startScanningForBeacons</TokenIdentifier>
@@ -134,23 +218,6 @@ with the updated list after the remote host has responded.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/loadTourById:</TokenIdentifier>
-			<Abstract type="html">Retreives a site from the remote host and sets it as the current site on the beacon manager</Abstract>
-			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
-			
-			<Declaration>- (void)loadTourById:(NSNumber *)tourId</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>tourId</Name>
-					<Abstract type="html">id of a gelo site</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/loadTourById:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/infoForBeaconId:</TokenIdentifier>
 			<Abstract type="html">Get information about a beacon in the context of the current site</Abstract>
 			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
@@ -168,73 +235,19 @@ with the updated list after the remote host has responded.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/setFalloff:forId:</TokenIdentifier>
-			<Abstract type="html">Sets the threshold for the specified beacon</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/loadTourById:</TokenIdentifier>
+			<Abstract type="html">Retreives a site from the remote host and sets it as the current site on the beacon manager</Abstract>
 			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
 			
-			<Declaration>- (void)setFalloff:(NSInteger)_falloff forId:(NSUInteger)_id</Declaration>
+			<Declaration>- (void)loadTourById:(NSNumber *)tourId</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>_falloff</Name>
-					<Abstract type="html">the threshold for determining if a beacon is near</Abstract>
-				</Parameter><Parameter>
-					<Name>_id</Name>
-					<Abstract type="html">the id of the beacon to apply the threshold to</Abstract>
+					<Name>tourId</Name>
+					<Abstract type="html">id of a gelo site</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/setFalloff:forId:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/setDefaultFalloff:</TokenIdentifier>
-			<Abstract type="html">Sets the default threshold to apply to beacons without a threshold of their own</Abstract>
-			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
-			
-			<Declaration>- (void)setDefaultFalloff:(NSInteger)_falloff</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>_falloff</Name>
-					<Abstract type="html">the threshold for determining if a beacon is near</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setDefaultFalloff:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/setDefaultTimeToLive:</TokenIdentifier>
-			<Abstract type="html">Sets the time a beacon will be allowed to remain in the known beacons list</Abstract>
-			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
-			
-			<Declaration>- (void)setDefaultTimeToLive:(NSUInteger)ttl</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>ttl</Name>
-					<Abstract type="html">the number of seconds a beacon will remain &quot;known&quot;</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setDefaultTimeToLive:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/setDefaultSignalCeiling:</TokenIdentifier>
-			<Abstract type="html">Sets the default minimum signal strength that the SDK will pay attention too</Abstract>
-			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
-			
-			<Declaration>- (void)setDefaultSignalCeiling:(NSInteger)ceiling</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>ceiling</Name>
-					<Abstract type="html">minimum signal strength</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setDefaultSignalCeiling:</Anchor>
+			<Anchor>//api/name/loadTourById:</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
@@ -252,18 +265,6 @@ with the updated list after the remote host has responded.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/setCurrentTour:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/GeLoBeaconManager/includeBetaTours</TokenIdentifier>
-			<Abstract type="html">Tell the beacon manager to request beta sites in addition to normal ones</Abstract>
-			<DeclaredIn>GeLoBeaconManager.h</DeclaredIn>
-			
-			<Declaration>- (void)includeBetaTours</Declaration>
-			
-			
-			<Anchor>//api/name/includeBetaTours</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

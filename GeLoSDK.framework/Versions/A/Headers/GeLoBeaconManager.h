@@ -1,12 +1,4 @@
-/** This class demonstrates AppleDoc.
- 
- A second paragaph comes after an empty line.
- 
- int i=0;
- i++;
- 
- And some simple code can also be in a block, but indented with a TAB.
- */
+
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
@@ -16,7 +8,9 @@
 #import "GeLoSite.h"
 
 
-
+/**
+ `GeLoBeaconManager` scans for beacons and also maintains a list of beacons it can find.
+**/
 @interface GeLoBeaconManager : NSObject<CBCentralManagerDelegate> {
     __block NSMutableDictionary	  *knownBeacons;
     __block NSMutableDictionary   *knownTourBeaconsDict;
@@ -38,6 +32,18 @@
 
 + (GeLoBeaconManager *)sharedInstance;
 
+//---------------------------------------------
+// @name Configuring Scanning
+//---------------------------------------------
+- (void)setFalloff:(NSInteger)falloff forId:(NSUInteger)_id;
+- (void)setDefaultFalloff:(NSInteger)falloff;
+- (void)setDefaultTimeToLive:(NSUInteger)ttl;
+- (void)setDefaultSignalCeiling:(NSInteger)ceiling;
+- (void)includeBetaTours;
+
+//---------------------------------------------
+// @name Scanning Control
+//---------------------------------------------
 - (void)startScanningForBeacons;
 - (void)resumeScanningForBeacons;
 - (BOOL)isScanning;
@@ -45,30 +51,31 @@
 - (void)stopScanningForBeacons;
 - (void)pauseScanningForBeacons;
 
-- (void)unsetNearestBeacon;
-
+//---------------------------------------------
+// @name Known Surroundings
+//---------------------------------------------
 - (NSArray *)knownBeacons;
 - (NSArray *)knownTourBeacons;
 - (GeLoBeacon *)nearestBeacon;
-
 - (NSArray *)knownTours;
 - (NSArray *)knownSites;
 - (GeLoTour *)currentTour;
 - (GeLoSite *)currentSite;
+- (NSArray*)findKnownTourBeacons;
 
-- (void)loadTourById:(NSNumber *)tourId;
-- (void)loadSiteById:(NSNumber *)siteId;
-
+//---------------------------------------------
+// @name Information
+//---------------------------------------------
 - (GeLoBeaconInfo *)infoForBeaconId:(NSNumber *)beaconId;
 - (NSInteger) siteForBeaconId:(NSInteger) beaconId;
 
-- (void)setFalloff:(NSInteger)falloff forId:(NSUInteger)_id;
-- (void)setDefaultFalloff:(NSInteger)falloff;
-- (void)setDefaultTimeToLive:(NSUInteger)ttl;
-- (void)setDefaultSignalCeiling:(NSInteger)ceiling;
+//---------------------------------------------
+// @name Utility Methods
+//---------------------------------------------
+- (void)loadTourById:(NSNumber *)tourId;
+- (void)loadSiteById:(NSNumber *)siteId;
 - (void)setCurrentTour:(GeLoTour *)tour;
-- (void)includeBetaTours;
+- (void)unsetNearestBeacon;
 
-- (NSArray*)findKnownTourBeacons;
 
 @end
